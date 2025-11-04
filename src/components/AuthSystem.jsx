@@ -35,8 +35,8 @@ export default function AuthSystem() {
         email,
         password,
         options: {
-          emailRedirectTo: window.location.origin
-        }
+  emailRedirectTo: 'https://supabase-auth-app-6dei.vercel.app'
+}
       })
 
       if (error) throw error
