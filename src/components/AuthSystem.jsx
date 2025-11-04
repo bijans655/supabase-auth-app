@@ -32,12 +32,9 @@ export default function AuthSystem() {
     setLoading(true)
     try {
       const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-  emailRedirectTo: 'https://supabase-auth-app-6dei.vercel.app'
-}
-      })
+  email,
+  password
+})
 
       if (error) throw error
       showMessage('success', 'Check your email for the verification code!')
